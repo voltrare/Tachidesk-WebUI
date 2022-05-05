@@ -4,7 +4,7 @@
  * This Source Code Form is subject to the terms of the Mozilla Public
  * License, v. 2.0. If a copy of the MPL was not distributed with this
  * file, You can obtain one at https://mozilla.org/MPL/2.0/. */
-
+import Box from '@mui/material/Box';
 import IconButton from '@mui/material/IconButton';
 import CloseIcon from '@mui/icons-material/Close';
 import KeyboardArrowLeftIcon from '@mui/icons-material/KeyboardArrowLeft';
@@ -18,7 +18,7 @@ import { useHistory, Link } from 'react-router-dom';
 import Slide from '@mui/material/Slide';
 import Fade from '@mui/material/Fade';
 import Zoom from '@mui/material/Zoom';
-import { Switch } from '@mui/material';
+import { Switch, Slider } from '@mui/material';
 import List from '@mui/material/List';
 import ListItem from '@mui/material/ListItem';
 import MenuItem from '@mui/material/MenuItem';
@@ -326,6 +326,11 @@ export default function ReaderNavBar(props: IProps) {
 
                                     </MenuItem>
                                 </Select>
+                            </ListItem>
+                            <ListItem>
+                                <Box width={90}>
+                                    <Slider defaultValue={50} aria-label="Default" valueLabelDisplay="auto" />
+                                </Box>
                             </ListItem>
                         </List>
                     </Collapse>
